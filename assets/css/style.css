@@ -1,0 +1,50 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+header{
+    
+}
+.title{
+    color: #004B87;
+    font-weight: bold;
+}
+.btn-primary {
+    background-color: #004B87; /* Deep blue for the button */
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #003865; /* Darker blue on hover */
+}
+input:focus {
+    box-shadow: none !important;
+    /* border-color: #F28C28 !important; */
+    border-color: #003865 !important; 
+}
+.input-group-text {
+    background-color: #004B87; /* Deep blue background for input icons */
+    color: #ffffff; /* White icon color */
+    border: none;
+}
+#login-section input{
+    height: 50px;
+}
+
+/* ==============L=O=G=I=N P=A=G=E============ */
+#login-section .card{
+    padding: 0px 20px;
+}
+#login-section img{
+    max-height: 300px;
+    margin-top: -60px;
+    margin-bottom: -50px;
+}
+@media (max-width: 768px) {
+    #login-section img{
+        max-height: 200px;
+        margin-top: -30px;
+    }
+    #login-section .card{
+        padding: 0px 15px;
+    }
+}
