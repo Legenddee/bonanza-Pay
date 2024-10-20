@@ -1,0 +1,485 @@
+/*----------------------------------------------
+Text Color
+------------------------------------------------*/
+.text-primary { color: #004B87 !important; }
+.text-secondary { color: #777D74 !important; }
+.text-success { color: #00ca00 !important; }
+.text-danger { color: #e64141 !important; }
+.text-warning { color: #ffd400 !important; }
+.text-info { color: #00d0ff !important; }
+.text-light { color: #E9EDF4 !important; }
+.text-dark { color: #000000 !important; }
+.text-white { color: #ffffff !important; }
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #f2f5f8;
+}
+.title{
+    color: #004B87;
+    font-weight: bold;
+}
+.btn-primary {
+    background-color: #004B87; /* Deep blue for the button */
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #003865; /* Darker blue on hover */
+}
+input:focus {
+    box-shadow: none !important;
+    /* border-color: #F28C28 !important; */
+    border-color: #003865 !important; 
+}
+.input-group-text {
+    background-color: #004B87; /* Deep blue background for input icons */
+    color: #ffffff; /* White icon color */
+    border: none;
+}
+#login-section input{
+    height: 50px;
+}
+
+/* ==============L=O=G=I=N P=A=G=E============ */
+#login-section .card{
+    padding: 0px 20px;
+}
+#login-section img{
+    max-height: 300px;
+    margin-top: -60px;
+    margin-bottom: -40px;
+}
+@media (max-width: 768px) {
+    #login-section img{
+        max-height: 200px;
+        margin-top: -30px;
+    }
+    #login-section .card{
+        padding: 0px 15px;
+    }
+}
+
+
+/* ============Dashboard========= */
+#logo img{
+    width: 100%;
+}
+#wallet-card{
+
+}
+#wallet-card .card-container {
+    position: relative;
+    /* width: 300px;  */
+}
+
+#wallet-card .card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    /* background-color: #004B87; */
+    background-color: #000;
+    /* height: 200px; */
+}
+
+#wallet-card .card-body {
+    position: relative;
+    z-index: 1; 
+    padding: 30px 20px 20px 20px;
+}
+
+#wallet-card .card-title {
+    margin-bottom: -5px;
+}
+
+#wallet-card .card-text {
+    font-size: 24px;
+}
+
+#wallet-card .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/card1.avif'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8; /* Adjust the opacity for transparency */
+    z-index: 0; /* Set behind the card content */
+}
+
+#wallet-card .card::after {
+    content: 'BONANZA PAY';
+    text-align: center;
+    line-height: 1.2;
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%) rotate(-10deg); /* Center and rotate the watermark */
+    font-size: 48px; 
+    font-weight: bolder;
+    color: rgba(255, 255, 255, 0.1); /* White color with low opacity for watermark effect */
+    z-index: 0; /* Set behind the card content */
+    pointer-events: none; /* Make sure the watermark does not interfere with clicks */
+}
+@media (max-width: 768px) {
+    #wallet-card .card::after {
+        left: 70%;
+    }
+}
+
+#wallet-card .country-flag{
+    color: #fff;
+    font-weight: bold;
+    margin-right: 10px;
+}
+#wallet-card .country-flag img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+#wallet-card .add-money {
+    display: flex;  
+    justify-content: center; 
+    align-items: center; 
+    z-index: 1;   
+    color: #000;
+}
+#wallet-card .add-money button{
+    margin-bottom: 20px;
+    outline: none;
+    border: none;
+    background-color: #ffffff7a;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+#wallet-card .add-money button:hover{
+    background-color: #ffffffd3;
+}
+#bi-headset img{
+    width: 60px;
+    height: 60px;
+}
+#bi-headset .bi-headset{
+    font-size: 28px;
+}
+@media (max-width: 768px) {
+    .userDP img{
+        width: 50px;
+        height: 50px;
+    }
+    #bi-headset .bi-headset{
+        font-size: 30px;
+    }
+}
+
+/*---------------------------------------------------------------------
+ ========================== Sidebar======================================
+-----------------------------------------------------------------------*/
+.iq-sidebar {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 260px;
+    overflow: hidden;
+    height: 100%;
+    background: #ffffff;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1);
+    box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1);
+}
+
+.iq-sidebar .iq-sidebar-logo {
+    width: 100%;
+    padding: 20px 0px;
+    /* background-color: #004B87; */
+}
+
+.iq-sidebar #sidebar-scrollbar {
+    margin-top: 25px;
+}
+
+
+.iq-sidebar-menu {
+    position: relative;
+}
+
+.iq-sidebar-menu .iq-menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.iq-sidebar-menu .iq-menu li {
+    list-style-type: none;
+    position: relative;
+}
+
+.iq-sidebar-menu .iq-menu li a {
+    font-size: 14px;
+    white-space: nowrap;
+    display: block;
+    color: #777D74;
+    position: relative;
+    padding: 15px 20px 15px 30px;
+    line-height: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.iq-sidebar-menu .iq-menu li a i {
+    font-size: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 20px;
+    display: inline-block;
+    float: left;
+}
+
+.iq-sidebar-menu .iq-menu li a span {
+    white-space: nowrap;
+    padding: 0;
+    display: inline-block;
+    float: left;
+}
+
+.bi-arrow-right-short {
+    margin-right: 0;
+    margin-left: auto;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+.iq-sidebar-menu .iq-menu li a .badge {
+    position: absolute;
+    right: 15px;
+    -webkit-transition: all 0.9s ease-out 0s;
+    -moz-transition: all 0.9s ease-out 0s;
+    -ms-transition: all 0.9s ease-out 0s;
+    -o-transition: all 0.9s ease-out 0s;
+    transition: all 0.9s ease-out 0s;
+}
+
+.iq-sidebar-menu .iq-menu li.active {
+    border-bottom: none;
+}
+
+.iq-sidebar-menu .iq-menu li a:hover,
+.iq-sidebar-menu .iq-menu li.active > a,
+.iq-sidebar-menu .iq-menu li.menu-open > a {
+    background-color: #f2f5f8;
+    text-decoration: none;
+}
+
+.iq-sidebar-menu .iq-menu li a[aria-expanded="true"] .bi-arrow-right-short,
+.iq-sidebar-menu .iq-menu li.menu-open .bi-arrow-right-short,
+.iq-sidebar-menu .iq-menu li.active .bi-arrow-right-short {
+    transform: rotate(90deg);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+/* Sidebar Menu Styles */
+.iq-sidebar-menu .iq-menu li .iq-submenu li a:hover, 
+.iq-sidebar-menu .iq-menu li.active .iq-submenu li>a { 
+    background: transparent; 
+}
+
+.iq-sidebar-menu .iq-menu li .iq-submenu li>a::before { 
+    display: none; 
+}
+
+/*---------------------------------------------------------------------
+                             Top Menu
+-----------------------------------------------------------------------*/
+
+/* General Styles */
+.iq-top-navbar {
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 0;
+    min-height: 73px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: inline-block;
+    z-index: 99;
+    background: #ffffff;
+    box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1);
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(45, 69, 95, 0.1);
+}
+
+/* Hide Sidebar Logo and Menu Button */
+.iq-top-navbar .iq-navbar-custom .iq-menu-bt {
+    display: none;
+}
+.iq-top-navbar .iq-sidebar-logo .top-logo {
+    display: none;
+}
+
+/* Breadcrumb Styles */
+.iq-top-navbar .iq-navbar-custom .navbar-breadcrumb {
+    display: inline-block;
+    margin: 15px 0 0 30px;
+    float: left;
+}
+.iq-top-navbar .breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+.iq-top-navbar .breadcrumb .breadcrumb-item.active {
+    color: #777D74;
+}
+.iq-top-navbar .breadcrumb li {
+    list-style-type: none;
+    font-size: 12px;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "\ea5f";
+    font-family: 'remixicon';
+    font-size: 14px;
+    vertical-align: sub;
+    color: #777D74;
+}
+.iq-top-navbar .breadcrumb li a,
+.iq-top-navbar .breadcrumb li a:hover {
+    text-decoration: none;
+}
+.iq-breadcrumb {
+    display: none;
+}
+
+/* Navbar List Styles */
+.navbar-list {
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+.navbar-list li {
+    float: left;
+    list-style-type: none;
+    position: relative;
+}
+.navbar-list li .dropdown-toggle::after {
+    display: none;
+}
+.navbar-list li>a {
+    font-size: 18px;
+    padding: 0 15px;
+    line-height: 73px;
+    color: #0084ff;
+    display: block;
+    min-height: 75px;
+}
+.navbar-list li a:hover {
+    text-decoration: none;
+}
+
+/*---------------------------------------------------------------------
+                             Sidebar Logo
+-----------------------------------------------------------------------*/
+.iq-sidebar-logo {
+    display: inline-block;
+    width: 260px;
+    padding-top: 15px;
+    padding-left: 20px;
+    float: left;
+    position: relative;
+    background: #ffffff;
+    transition: all 0.3s ease-out;
+}
+
+/*---------------------------------------------------------------------
+                              Content Page
+-----------------------------------------------------------------------*/
+.content-page {
+    margin-left: 260px;
+    overflow: hidden;
+    padding: 100px 15px 0;
+    min-height: 100vh;
+    transition: all 0.3s ease-out;
+}
+
+
+/* ========================
+        Services Card
+==============================*/
+#Services .service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    transition: transform 0.2s;
+    text-decoration: none;
+    color: inherit;
+}
+#Services .service-card:hover {
+    transform: scale(1.05);
+}
+
+#Services .service-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #004B87;
+    padding: 20px;
+    background-color: rgba(0, 123, 255, 0.1); /* Soft transparent blue tint */
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+}
+
+#Services .service-title {
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    #Services .service-card{
+        padding: 10px 0px;
+    }
+    #Services .service-icon {
+        font-size: 20px;
+        margin-bottom: 5px;
+        padding: 5px;
+        width: 40px;
+        height: 40px;
+    }
+    #Services .service-title {
+        font-size: 14px;
+    }
+}
+
+#Services .main-card {
+    padding: 20px;
+    margin-bottom: 20px;
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
+    border: none;
+}

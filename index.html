@@ -1,67 +1,284 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>Bonanza-Pay</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>BONANZA-PAY</title>
+    <!-- Bootstrap CSS -->
+   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> <!-- Favicon -->
+      <link rel="shortcut icon" href="images/logo.png" />
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="dashboard-css/bootstrap.min.css">
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="./css/style.css">
+      <!-- Responsive CSS -->
+      <link rel="stylesheet" href="./css/responsive.css">
+   </head>
+   <body>
+      <!-- loader Start -->
+      <div id="loading">
+         <div id="loading-center">
+            <div class="loader">
+               <div class="cube">
+                  <div class="sides">
+                     <div class="top"></div>
+                     <div class="right"></div>
+                     <div class="bottom"></div>
+                     <div class="left"></div>
+                     <div class="front"></div>
+                     <div class="back"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- loader END -->
+       
+      <!-- Wrapper Start -->
+      <div class="wrapper">
+         <!-- Sidebar  -->
+         <div class="iq-sidebar">
+            <div class="iq-sidebar-logo d-flex justify-content-between" id="logo">
+               <a href="#">
+                <!-- <img src="images/logo2.jpg" class="img-fluid" alt=""> -->
+                <h4 class="text-primary">BONANZA-PAY</h4>
+               </a>
+               
+            </div>
+            <div id="sidebar-scrollbar">
+               <nav class="iq-sidebar-menu">
+                  <ul id="iq-sidebar-toggle" class="iq-menu">
+                    <li class="active">
+                        <a href="#" class="iq-waves-effect"><i class="bi bi-house-door"></i><span>Dashboard</span></a>
+                    </li>
 
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="./assets/css/style.css">
-    </head>
+                     <li>
+                        <a href="#mailbox" class="iq-waves-effect collapsed"  data-toggle="collapse" aria-expanded="false"><i class="bi bi-envelope"></i><span>Email</span><i class="bi bi-arrow-right-short"></i></a>
+                        <ul id="mailbox" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                           <li><a href="app/index.html">Inbox</a></li>
+                           <li><a href="app/email-compose.html">Email Compose</a></li>
+                        </ul>
+                     </li>
 
-    <body style="background-color:#ececec;">
-        <main>
-            <div class="container" id="login-section">
-                <div class="row d-flex justify-content-center align-items-center min-vh-100">
-                    <div class="col-md-3"></div>
-                    <div class="col-md-6 justify-content-center">
-                        <div class="card shadow-lg pb-3 " style="max-width: 100%;">
-                            <div class="text-center">
-                                <img src="./assets/images/logoo.png" alt="Bonanza" class="img-fluid" >
-                            </div><hr>
-                            <p class="text-center title mb-4" style="margin-top: -15px;">Enter your username & password to login</p>
-                            <form action="login_process.php" method="POST">
-                                <div class="mb-4 input-group">
-                                    <span class="input-group-text"><i class="bi bi-person fs-4"></i></span>
-                                    <input type="text" class="form-control fs-5" placeholder="Username" name="username" required >
-                                </div>
-                                <div class="mb-4 input-group">
-                                    <span class="input-group-text"><i class="bi bi-lock fs-4"></i></span>
-                                    <input type="password" class="form-control fs-5" placeholder="Password" name="password" required >
-                                </div>
-                                <button type="submit" class="btn btn-primary w-100 fw-bold fs-5" style="height: 50px;">Login</button>
-                                <div class="text-center mt-4">
-                                    <p>Don't have an account? <a href="./assets/signup.html">Sign up</a></p>
-                                </div>
-                            </form>
+                     <li>
+                        <a href="todo.html" class="iq-waves-effect"><i class="ri-chat-check-line"></i><span>Todo</span></a>
+                    </li>
+                     
+                     <li>
+                        <a href="#user-info" class="iq-waves-effect collapsed"  data-toggle="collapse" aria-expanded="false"><i class="ri-user-line"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                        <ul id="user-info" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                           <li><a href="profile.html">User Profile</a></li>
+                           <li><a href="profile-edit.html">User Edit</a></li>
+                           <li><a href="add-user.html">User Add</a></li>
+                           <li><a href="user-list.html">User List</a></li>
+                        </ul>
+                     </li>
+                     <li><a href="calendar.html" class="iq-waves-effect"><i class="ri-calendar-2-line"></i><span>Calendar</span></a></li>
+                     
+                  </ul>
+               </nav>
+               <div class="p-3"></div>
+            </div>
+         </div>
+         <!-- TOP Nav Bar -->
+         <div class="iq-top-navbar">
+            <div class="iq-navbar-custom">
+               <div class="iq-sidebar-logo">
+                  <div class="top-logo">
+                     <div class="userDP d-flex justify-content-between">
+                        <a href="#" class="logo">
+                            <img src="images/profile-img.jpg" class="img-fluid rounded d-lg-none d-block" alt="">
+                        </a>
+                        <p class="ml-2 text-dark"><b>Hi, Deecipher</b> <small><br>Welcome, Let's make payments</small></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="navbar-breadcrumb">
+                  <h5 class="mb-0">Dashboard</h5>
+                  <nav aria-label="breadcrumb">
+                     <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Home</li>
+                     </ul>
+                  </nav>
+               </div>
+               
+               <nav class="navbar navbar-expand-lg  p-0" id="bi-headset">
+                  <ul class="navbar-list ml-auto">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="">
+                            <i class="bi bi-headset text-dark" title="Chat our customer service"></i>
+                        </a>
+                    </li>                  
+                     <li class="d-none d-lg-block">
+                        <a href="#" class="search-toggle iq-waves-effect"><img src="images/profile-img.jpg" class="img-fluid rounded " alt="user"></a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+         <!-- TOP Nav Bar END -->
+
+         <!-- Page Content  -->
+         <div id="content-page" class="content-page">
+            <div class="container mb-3">
+               <div class="row">
+                <!-- wallets cards -->
+                <div class="col-md-8 col-lg-8" id="wallet-card">
+                    <div class="card ">
+                        <div class="card-body d-flex justify-content-between ">
+                            <div class="wallet-text text-white">
+                                <h4 class="card-title">Available Balance</h4>
+                                <p class="card-text"><b>₦ </b><span id="user-balance">100.00</span></p>
+                            </div>
+                            <div class="country-flag">
+                                <img src="images/country-plag.png" class="img-fluid" alt="">
+                                <span class="">NGN</span>
+                            </div>
+                        </div>
+                        <div class="add-money fs-6">
+                            <button type="button"><i class="bi bi-plus-circle-fill"></i> Add Money</button>
                         </div>
                     </div>
-                    <div class="col-md-3"></div>
+                </div>
+                
+                <div class="col-md-4"></div>
+               </div>
+            </div>
+
+            <div class="container" id="Services">
+                <!-- Main col-12 card -->
+                <h4>Services</h4>
+                <div class="card col-12 main-card">
+                    <div class="row">
+                        <!-- Airtime Card -->
+                        <div class="col-4 col-md-4 col-lg-3 mb-4">
+                            <a href="#" class="service-card"> 
+                                <div class="service-icon">
+                                    <i class="bi bi-telephone"></i> 
+                                </div>
+                                <div class="service-title">Airtime</div>
+                            </a>
+                        </div>
+                        <!-- Data Card -->
+                        <div class="col-4 col-md-4 col-lg-3 mb-4">
+                            <a href="#" class="service-card"> <!-- Link to Data page -->
+                                <div class="service-icon">
+                                    <i class="bi bi-wifi"></i> <!-- Bootstrap icon for wifi -->
+                                </div>
+                                <div class="service-title">Data</div>
+                            </a>
+                        </div>
+                        <!-- Electricity Card -->
+                        <div class="col-4 col-md-4 col-lg-3 mb-4">
+                            <a href="#" class="service-card"> <!-- Link to Electricity page -->
+                                <div class="service-icon">
+                                    <i class="bi bi-lightning"></i> <!-- Bootstrap icon for electricity -->
+                                </div>
+                                <div class="service-title">Electricity</div>
+                            </a>
+                        </div>
+                        <!-- Cable TV Card -->
+                        <div class="col-4 col-md-4 col-lg-3 mb-4">
+                            <a href="#" class="service-card"> <!-- Link to Cable TV page -->
+                                <div class="service-icon">
+                                    <i class="bi bi-tv"></i> <!-- Bootstrap icon for TV -->
+                                </div>
+                                <div class="service-title">Cable TV</div>
+                            </a>
+                        </div>
+                        <!-- Exam pins Card -->
+                        <div class="col-4 col-md-4 col-lg-3 mb-4">
+                            <a href="#" class="service-card"> 
+                                <div class="service-icon">
+                                    <i class="bi bi-mortarboard"></i> 
+                                </div>
+                                <div class="service-title">Exam Pin</div>
+                            </a>
+                        </div>
+
+                        <!-- Data pins Card -->
+                        <div class="col-4 col-md-4 col-lg-3 mb-4">
+                            <a href="#" class="service-card"> 
+                                <div class="service-icon">
+                                    <i class="bi bi-upc-scan"></i> 
+                                </div>
+                                <div class="service-title">Data Pin</div>
+                            </a>
+                        </div>
+
+                        <!-- Betting Card -->
+                        <div class="col-4 col-md-4 col-lg-3 mb-4">
+                            <a href="#" class="service-card"> 
+                                <div class="service-icon">
+                                    <i class="bi bi-dice-5"></i> 
+                                </div>
+                                <div class="service-title">Betting</div>
+                            </a>
+                        </div>
+
+                        <!-- Airtime Swap Card -->
+                        <div class="col-4 col-md-4 col-lg-3 mb-4">
+                            <a href="#" class="service-card"> 
+                                <div class="service-icon">
+                                    <i class="bi bi-arrow-left-right"></i> 
+                                </div>
+                                <div class="service-title">Swap</div>
+                            </a>
+                        </div>
+
+                        <!-- Logout Card -->
+                        <div class="col-4 col-md-4 col-lg-3 mb-4">
+                            <a href="#" class="service-card"> 
+                                <div class="service-icon">
+                                    <i class="bi bi-box-arrow-right"></i> 
+                                </div>
+                                <div class="service-title">Logout</div>
+                            </a>
+                        </div>
+                        <!-- Add more cards as needed -->
+                    </div>
                 </div>
             </div>
-        </main>
-
-        <footer>
-            <!-- place footer here -->
-        </footer>
-        <!-- Bootstrap JavaScript Libraries -->
+         </div>
+      </div>
+      <!-- Wrapper END -->
+      <!-- Footer -->
+      <footer class="bg-white iq-footer">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-lg-6">
+                  <ul class="list-inline mb-0">
+                     <li class="list-inline-item"><a href="privacy-policy.html">Privacy Policy</a></li>
+                     <li class="list-inline-item"><a href="terms-of-service.html">Terms of Use</a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-6 text-right">
+                  Copyright 2020 <a href="#">Sofbox</a> All Rights Reserved.
+               </div>
+            </div>
+         </div>
+      </footer>
+      
+      <!-- Footer END -->
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="dashboard-js/jquery.min.js"></script>
+      <script src="dashboard-js/popper.min.js"></script>
+      <script src="dashboard-js/bootstrap.min.js"></script>
+      <!-- Appear JavaScript -->
+      <script src="dashboard-js/jquery.appear.js"></script>
+      <!-- Countdown JavaScript -->
+      <script src="js/countdown.min.js"></script>
+      <!-- Counterup JavaScript -->
+      <script src="js/waypoints.min.js"></script>
+      <script src="dashboard-js/jquery.counterup.min.js"></script>
+      <!-- Custom JavaScript -->
+      <script src="dashboard-js/custom.js"></script>
+       <!-- Bootstrap JS and Popper.js -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
-
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+   </body>
 </html>
