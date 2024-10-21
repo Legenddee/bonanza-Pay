@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>BONANZA-PAY</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> <!-- Favicon -->
+      <link rel="shortcut icon" href="images/logo.png" />
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="./css/style.css">
+      <!-- Responsive CSS -->
+      <link rel="stylesheet" href="./css/responsive.css">
+   </head>
+   <body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+      <!-- loader Start -->
+      <div id="loading">
+         <div id="loading-center">
+            <div class="loader">
+               <div class="cube">
+                  <div class="sides">
+                     <div class="top"></div>
+                     <div class="right"></div>
+                     <div class="bottom"></div>
+                     <div class="left"></div>
+                     <div class="front"></div>
+                     <div class="back"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- loader END -->
+       
+      <!-- Wrapper Start -->
+      <div class="wrapper airtime-container" id="airtimeContainer">
+         <!-- Sidebar  -->
+         <div class="iq-sidebar">
+            <div class="iq-sidebar-logo d-flex justify-content-between" id="logo">
+               <a href="#">
+                <!-- <img src="images/logo2.jpg" class="img-fluid" alt=""> -->
+                <h4 class="text-primary">BONANZA-PAY</h4>
+               </a>
+               
+            </div>
+            <div id="sidebar-scrollbar">
+               <nav class="iq-sidebar-menu">
+                  <ul id="iq-sidebar-toggle" class="iq-menu">
+                    <li class="active">
+                        <a href="#" class="iq-waves-effect"><i class="bi bi-house-door"></i><span>Dashboard</span></a>
+                    </li>
+
+                     <li>
+                        <a href="#mailbox" class="iq-waves-effect collapsed"  data-toggle="collapse" aria-expanded="false"><i class="bi bi-envelope"></i><span>Email</span><i class="bi bi-arrow-right-short"></i></a>
+                        <ul id="mailbox" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                           <li><a href="app/index.html">Inbox</a></li>
+                           <li><a href="app/email-compose.html">Email Compose</a></li>
+                        </ul>
+                     </li>
+
+                     <li>
+                        <a href="todo.html" class="iq-waves-effect"><i class="ri-chat-check-line"></i><span>Todo</span></a>
+                    </li>
+                     
+                     <li>
+                        <a href="#user-info" class="iq-waves-effect collapsed"  data-toggle="collapse" aria-expanded="false"><i class="ri-user-line"></i><span>User</span><i class="ri-arrow-right-s-line iq-arrow-right"></i></a>
+                        <ul id="user-info" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                           <li><a href="profile.html">User Profile</a></li>
+                           <li><a href="profile-edit.html">User Edit</a></li>
+                           <li><a href="add-user.html">User Add</a></li>
+                           <li><a href="user-list.html">User List</a></li>
+                        </ul>
+                     </li>
+                     <li><a href="calendar.html" class="iq-waves-effect"><i class="ri-calendar-2-line"></i><span>Calendar</span></a></li>
+                     
+                  </ul>
+               </nav>
+               <div class="p-3"></div>
+            </div>
+         </div>
+         
+         <!-- TOP Nav Bar -->
+         <div class="iq-top-navbar">
+            <div class="iq-navbar-custom">
+               <div class="iq-sidebar-logo">
+                  <div class="top-logo">
+                     <div class="userDP d-flex justify-content-between">
+                        <a href="#" class="logo">
+                            <img src="images/profile-img.jpg" class="img-fluid rounded d-lg-none d-block" alt="">
+                        </a>
+                        <p class="ml-2 text-dark"><b>Hi, Deecipher</b> <small><br>Welcome, Let's make payments</small></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="navbar-breadcrumb">
+                  <h5 class="mb-0">Dashboard</h5>
+                  <nav aria-label="breadcrumb">
+                     <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Home</li>
+                     </ul>
+                  </nav>
+               </div>
+               
+               <nav class="navbar navbar-expand-lg  p-0" id="bi-headset">
+                  <ul class="navbar-list ml-auto">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="">
+                            <i class="bi bi-headset text-dark" title="Chat our customer service"></i>
+                        </a>
+                    </li>                  
+                     <li class="d-none d-lg-block">
+                        <a href="#" class="search-toggle iq-waves-effect"><img src="images/profile-img.jpg" class="img-fluid rounded " alt="user"></a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+         <!-- TOP Nav Bar END -->
+
+         <!-- Page Content  -->
+         <div id="buyAirtimeContent-page" class="content-page">
+            <div class="container">
+                <h3 class="mb-3 fs-5 mt-n2">Buy Airtime</h3><hr class="mt-n2">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="network">Select Network</label>
+                            <select class="form-control" id="network" required>
+                                <option value="">Select Network</option>
+                                <option value="mtn">MTN</option>
+                                <option value="airtel">Airtel</option>
+                                <option value="glo">GLO</option>
+                                <option value="9mobile">9Mobile</option>
+                            </select>
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Enter phone number" required>
+                        </div>
+
+                        <!-- Amount -->
+                        <div class="form-group">
+                            <label for="amount">Amount</label>
+                            <input type="tel" class="form-control" id="amount" placeholder="Enter amount" required>
+                        </div>
+
+                        <!-- Pay Button -->
+                        <button type="button" class="btn pay-btn" onclick="openPaymentCard()">Pay</button>
+                    </div>
+                </div>
+                
+            </div>
+         </div>
+
+
+         <!-- Sliding Payment Card -->
+        <div class="payment-card mb-3" id="paymentCard">
+            <span class="close-btn" onclick="closePaymentCard()"><i class="bi bi-x-circle"></i></span> 
+            <div class="payment-title">Enter Payment PIN</div>
+            <!-- Custom Number Boxes -->
+            <div class="password-boxes" id="passwordBoxes">
+                <div class="ml-1 mr-1" id="box1"></div>
+                <div class="ml-1 mr-1" id="box2"></div>
+                <div class="ml-1 mr-1" id="box3"></div>
+                <div class="ml-1 mr-1" id="box4"></div>
+            </div>
+            <!-- Keypad -->
+            <div class="keypad mb-3" id="keypad">
+                <button onclick="pressKey(1)">1</button>
+                <button onclick="pressKey(2)">2</button>
+                <button onclick="pressKey(3)">3</button>
+                <button onclick="pressKey(4)">4</button>
+                <button onclick="pressKey(5)">5</button>
+                <button onclick="pressKey(6)">6</button>
+                <button onclick="pressKey(7)">7</button>
+                <button onclick="pressKey(8)">8</button>
+                <button onclick="pressKey(9)">9</button>
+                <button class="zero-btn" onclick="pressKey(0)">0</button>
+                <!-- <button></button> -->
+                <button class="backspace-btn" onclick="backspace()"><i class="bi bi-arrow-left-circle-fill"></i></button>
+            </div><br>
+        </div>
+      </div>
+      <!-- Wrapper END -->
+
+       <!-- Sticky Bottom Navigation -->
+        <nav class="sticky-bottom-nav navbar-light bg-light d-lg-none">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-3">
+                        <a href="userDashboard.php" class="nav-link">
+                            <i class="bi bi-house-door"></i>
+                            <div>Home</div>
+                        </a>
+                    </div>
+                    <div class="col-3">
+                        <a href="transactions.php" class="nav-link">
+                            <i class="bi bi-receipt"></i>
+                            <div>History</div>
+                        </a>
+                    </div>
+                    <div class="col-3">
+                        <a href="profile.php" class="nav-link">
+                            <i class="bi bi-person"></i>
+                            <div>Profile</div>
+                        </a>
+                    </div>
+                    <div class="col-3">
+                        <a href="more.php" class="nav-link">
+                            <i class="bi bi-three-dots"></i>
+                            <div>More</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+      <!-- Footer -->
+      <footer class="bg-white iq-footer">
+      </footer>
+
+      <script>
+        let password = [];
+        const passwordBoxes = [document.getElementById('box1'), document.getElementById('box2'), document.getElementById('box3'), document.getElementById('box4')];
+
+        // Function to open sliding payment card
+        function openPaymentCard() {
+            document.getElementById('paymentCard').classList.add('active');
+            document.getElementById('passwordBoxes').style.display = 'flex';
+            document.getElementById('keypad').style.display = 'grid';
+        }
+
+        // Function to close sliding payment card and reset fields
+        function closePaymentCard() {
+            // Remove the active class to hide the payment card
+            document.getElementById('paymentCard').classList.remove('active');
+            
+            // Hide the password boxes and keypad
+            document.getElementById('passwordBoxes').style.display = 'none';
+            document.getElementById('keypad').style.display = 'none';
+            
+            // Reset the password and empty the boxes
+            resetPassword();
+        }
+
+        // Function to handle keypress from the numeric keypad
+        function pressKey(key) {
+            if (password.length < 4) {
+                password.push(key);
+                passwordBoxes[password.length - 1].textContent = key;
+                passwordBoxes[password.length - 1].classList.add('filled');
+
+                // If the password has 4 digits, submit it
+                if (password.length === 4) {
+                    showLoadingAnimation();
+                }
+            }
+        }
+
+        // Function to handle backspace (delete last digit)
+        function backspace() {
+            if (password.length > 0) {
+                password.pop();
+                const lastBox = passwordBoxes[password.length];
+                lastBox.textContent = '';
+                lastBox.classList.remove('filled');
+            }
+        }
+
+        // Function to show loading animation and blur background
+        function showLoadingAnimation() {
+            document.getElementById('airtimeContainer').classList.add('blurred'); // Blur background
+            document.getElementById('loadingOverlay').classList.add('active'); // Show loading
+
+            // Simulate processing time (3 seconds)
+            setTimeout(function() {
+                hideLoadingAnimation();
+                // Redirect to success or error page
+                window.location.href = 'success.html'; // Change to 'error.html' for error
+            }, 3000);
+        }
+
+        // Function to hide loading animation
+        function hideLoadingAnimation() {
+            document.getElementById('airtimeContainer').classList.remove('blurred'); // Remove blur
+            document.getElementById('loadingOverlay').classList.remove('active'); // Hide loading
+        }
+
+        // Function to reset the password input
+        function resetPassword() {
+            password = [];
+            passwordBoxes.forEach(box => {
+                box.textContent = '';
+                box.classList.remove('filled');
+            });
+        }
+    </script>
+      
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- Footer END -->
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="dashboard-js/jquery.min.js"></script>
+      <script src="dashboard-js/popper.min.js"></script>
+      <script src="dashboard-js/bootstrap.min.js"></script>
+      <!-- Appear JavaScript -->
+      <script src="dashboard-js/jquery.appear.js"></script>
+      <script src="dashboard-js/jquery.counterup.min.js"></script>
+      <!-- Custom JavaScript -->
+      <script src="dashboard-js/custom.js"></script>
+       <!-- Bootstrap JS and Popper.js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+   </body>
+</html>
