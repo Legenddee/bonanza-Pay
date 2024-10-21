@@ -13,6 +13,7 @@ Text Color
 
 body{
     padding: 0;
+    padding-bottom: 60px;
     margin: 0;
     background-color: #f2f5f8;
 }
@@ -398,6 +399,38 @@ input:focus {
     text-decoration: none;
 }
 
+ /* Sticky Bottom Nav Styling */
+ .sticky-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.sticky-bottom-nav .nav-link {
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    color: #6c757d;
+}
+
+.sticky-bottom-nav .nav-link .bi {
+    font-size: 20px;
+}
+.sticky-bottom-nav .nav-link:hover{
+    color: #004B87;
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 70%;
+}
+.sticky-bottom-nav .nav-link.active {
+    color: #004B87;
+}
+
+
 /*---------------------------------------------------------------------
                              Sidebar Logo
 -----------------------------------------------------------------------*/
@@ -482,4 +515,144 @@ input:focus {
     margin-bottom: 20px;
     /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
     border: none;
+}
+
+/* =============Transaction History Page====== */
+#historyContent-page .history-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#historyContent-page .history-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+#historyContent-page .history-card.success::before, #historyContent-page .history-card.error::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#historyContent-page  .history-card.success::before {
+    background-color: #28a745; /* Success color */
+}
+
+#historyContent-page  .history-card.error::before {
+    background-color: #dc3545; /* Error color */
+}
+
+#historyContent-page .transaction-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#historyContent-page .transaction-info h6 {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+#historyContent-page .transaction-info small {
+    color: #6c757d;
+}
+
+#historyContent-page .transaction-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#historyContent-page .transaction-id {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+#historyContent-page .eye-icon {
+    cursor: pointer;
+    color: #004B87;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#historyContent-page .eye-icon:hover {
+    color: #0056b3;
+    transform: scale(1.1);
+}
+
+#historyContent-page .transaction-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#historyContent-page .transaction-status i {
+    font-size: 24px;
+}
+
+#historyContent-page .amount {
+    font-size: 20px;
+    font-weight: bold;
+    color: #343a40;
+}
+
+/* ========Top-up History Preview=============*/
+.history-preview {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.history-preview .history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.history-preview .history-item:last-child {
+    border-bottom: none; /* Remove border for the last item */
+}
+
+.history-preview .transaction-type {
+    font-weight: bold;
+}
+.history-preview  .transaction-date {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.history-preview  .amount {
+    font-size: 18px;
+    font-weight: bold;
+    color: #343a40;
+}
+
+.history-preview  .view-all {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.history-preview .view-all a {
+    color: #004B87;
+    font-weight: bold;
+}
+
+.history-preview .view-all a:hover {
+    text-decoration: underline;
 }

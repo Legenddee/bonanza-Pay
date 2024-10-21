@@ -81,6 +81,7 @@
                <div class="p-3"></div>
             </div>
          </div>
+         
          <!-- TOP Nav Bar -->
          <div class="iq-top-navbar">
             <div class="iq-navbar-custom">
@@ -121,155 +122,37 @@
          <!-- TOP Nav Bar END -->
 
          <!-- Page Content  -->
-         <div id="content-page" class="content-page">
-            <div class="container mb-3">
-               <div class="row">
-                <!-- wallets cards -->
-                <div class="col-md-8 col-lg-8" id="wallet-card">
-                    <div class="card ">
-                        <div class="card-body d-flex justify-content-between ">
-                            <div class="wallet-text text-white">
-                                <h4 class="card-title">Available Balance</h4>
-                                <p class="card-text"><b>₦ </b><span id="user-balance">100.00</span></p>
-                            </div>
-                            <div class="country-flag">
-                                <img src="images/country-plag.png" class="img-fluid" alt="">
-                                <span class="">NGN</span>
-                            </div>
-                        </div>
-                        <div class="add-money fs-6">
-                            <button type="button"><i class="bi bi-plus-circle-fill"></i> Add Money</button>
-                        </div>
+         <div id="historyContent-page" class="content-page">
+            <div class="container">
+                <h3 class="mb-3 fs-5 mt-n3">Transaction History</h3><hr>
+
+                <!-- Transaction Card for Success -->
+                <div class="history-card success">
+                    <div class="transaction-info">
+                        <h6>Airtime Purchase</h6>
+                        <small>Date: 20 Oct 2024</small>
                     </div>
-                </div>
-                
-                <div class="col-md-4"></div>
-               </div>
-            </div>
-
-            <div class="container" id="Services">
-                <!-- Main col-12 card -->
-                <h5 class="fs-5">Services</h5>
-                <div class="card col-12 main-card">
-                    <div class="row">
-                        <!-- Airtime Card -->
-                        <div class="col-4 col-md-4 col-lg-3 mb-4">
-                            <a href="#" class="service-card"> 
-                                <div class="service-icon">
-                                    <i class="bi bi-telephone"></i> 
-                                </div>
-                                <div class="service-title">Airtime</div>
-                            </a>
-                        </div>
-                        <!-- Data Card -->
-                        <div class="col-4 col-md-4 col-lg-3 mb-4">
-                            <a href="#" class="service-card"> <!-- Link to Data page -->
-                                <div class="service-icon">
-                                    <i class="bi bi-wifi"></i> <!-- Bootstrap icon for wifi -->
-                                </div>
-                                <div class="service-title">Data</div>
-                            </a>
-                        </div>
-                        <!-- Electricity Card -->
-                        <div class="col-4 col-md-4 col-lg-3 mb-4">
-                            <a href="#" class="service-card"> <!-- Link to Electricity page -->
-                                <div class="service-icon">
-                                    <i class="bi bi-lightning"></i> <!-- Bootstrap icon for electricity -->
-                                </div>
-                                <div class="service-title">Electricity</div>
-                            </a>
-                        </div>
-                        <!-- Cable TV Card -->
-                        <div class="col-4 col-md-4 col-lg-3 mb-4">
-                            <a href="#" class="service-card"> <!-- Link to Cable TV page -->
-                                <div class="service-icon">
-                                    <i class="bi bi-tv"></i> <!-- Bootstrap icon for TV -->
-                                </div>
-                                <div class="service-title">Cable TV</div>
-                            </a>
-                        </div>
-                        <!-- Exam pins Card -->
-                        <div class="col-4 col-md-4 col-lg-3 mb-4">
-                            <a href="#" class="service-card"> 
-                                <div class="service-icon">
-                                    <i class="bi bi-mortarboard"></i> 
-                                </div>
-                                <div class="service-title">Exam Pin</div>
-                            </a>
-                        </div>
-
-                        <!-- Data pins Card -->
-                        <div class="col-4 col-md-4 col-lg-3 mb-4">
-                            <a href="#" class="service-card"> 
-                                <div class="service-icon">
-                                    <i class="bi bi-upc-scan"></i> 
-                                </div>
-                                <div class="service-title">Data Pin</div>
-                            </a>
-                        </div>
-
-                        <!-- Betting Card -->
-                        <div class="col-4 col-md-4 col-lg-3 mb-4">
-                            <a href="#" class="service-card"> 
-                                <div class="service-icon">
-                                    <i class="bi bi-dice-5"></i> 
-                                </div>
-                                <div class="service-title">Betting</div>
-                            </a>
-                        </div>
-
-                        <!-- Airtime Swap Card -->
-                        <div class="col-4 col-md-4 col-lg-3 mb-4">
-                            <a href="#" class="service-card"> 
-                                <div class="service-icon">
-                                    <i class="bi bi-arrow-left-right"></i> 
-                                </div>
-                                <div class="service-title">Swap</div>
-                            </a>
-                        </div>
-
-                        <!-- Logout Card -->
-                        <div class="col-4 col-md-4 col-lg-3 mb-4">
-                            <a href="#" class="service-card"> 
-                                <div class="service-icon">
-                                    <i class="bi bi-box-arrow-right"></i> 
-                                </div>
-                                <div class="service-title">Logout</div>
-                            </a>
-                        </div>
-                        <!-- Add more cards as needed -->
+                    <div class="transaction-details">
+                        <div class="transaction-id">Transaction ID: #123456789</div>
+                    </div>
+                    <div class="transaction-status">
+                        <span class="amount">₦500</span>
+                        <i class="bi bi-eye eye-icon ml-3"></i> 
                     </div>
                 </div>
 
-                <h5 class="fs-5">Top-up History Preview</h5>
-                <div class="history-preview">
-                    <!-- History Item 1 -->
-                    <div class="history-item">
-                        <div>
-                            <div class="transaction-type">Airtime Purchase</div>
-                            <div class="transaction-date">Date: 20 Oct 2024</div>
-                        </div>
-                        <div class="amount">₦500</div>
+                <!-- Transaction Card for Error -->
+                <div class="history-card error">
+                    <div class="transaction-info">
+                        <h6>Data Purchase</h6>
+                        <small>Date: 18 Oct 2024</small>
                     </div>
-                    <!-- History Item 2 -->
-                    <div class="history-item">
-                        <div>
-                            <div class="transaction-type">Data Purchase</div>
-                            <div class="transaction-date">Date: 18 Oct 2024</div>
-                        </div>
-                        <div class="amount">₦1,000</div>
+                    <div class="transaction-details">
+                        <div class="transaction-id">Transaction ID: #987654321</div>
                     </div>
-                    <!-- History Item 3 -->
-                    <div class="history-item">
-                        <div>
-                            <div class="transaction-type">Electricity Bill</div>
-                            <div class="transaction-date">Date: 15 Oct 2024</div>
-                        </div>
-                        <div class="amount">₦2,500</div>
-                    </div>
-                    <!-- View All Button -->
-                    <div class="view-all">
-                        <a href="transactions.html">View All Transactions <i class="bi bi-arrow-right"></i></a>
+                    <div class="transaction-status">
+                        <span class="amount">₦1,000</span>
+                        <i class="bi bi-eye eye-icon ml-3"></i> 
                     </div>
                 </div>
             </div>
@@ -281,13 +164,13 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-3">
-                        <a href="index.html" class="nav-link active">
+                        <a href="index.html" class="nav-link">
                             <i class="bi bi-house-door"></i>
                             <div>Home</div>
                         </a>
                     </div>
                     <div class="col-3">
-                        <a href="transactions.html" class="nav-link">
+                        <a href="transactions.html" class="nav-link active">
                             <i class="bi bi-receipt"></i>
                             <div>History</div>
                         </a>
@@ -307,6 +190,10 @@
                 </div>
             </div>
         </nav>
+      <!-- Footer -->
+      <footer class="bg-white iq-footer">
+
+      </footer>
       
       <!-- Footer END -->
       <!-- Optional JavaScript -->
