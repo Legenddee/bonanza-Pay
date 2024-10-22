@@ -5,10 +5,10 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <title>BONANZA-PAY</title>
-        <!-- Bootstrap CSS -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Bootstrap Icons -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> <!-- Favicon -->
+    <!-- Bootstrap CSS -->
+   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> <!-- Favicon -->
       <link rel="shortcut icon" href="images/logo.png" />
       <!-- Style CSS -->
       <link rel="stylesheet" href="./css/style.css">
@@ -16,11 +16,6 @@
       <link rel="stylesheet" href="./css/responsive.css">
    </head>
    <body>
-    <!-- Loading Overlay -->
-    <div class="loading-overlay" id="loadingOverlay">
-        <div class="loading-spinner"></div>
-    </div>
-
       <!-- loader Start -->
       <div id="loading">
          <div id="loading-center">
@@ -40,8 +35,8 @@
       </div>
       <!-- loader END -->
        
-      <!-- Wrapper Start -->
-      <div class="wrapper airtime-container" id="airtimeContainer">
+    <!-- Wrapper Start -->
+    <div class="wrapper">
          <!-- Sidebar  -->
          <div class="iq-sidebar">
             <div class="iq-sidebar-logo d-flex justify-content-between" id="logo">
@@ -127,73 +122,94 @@
          <!-- TOP Nav Bar END -->
 
          <!-- Page Content  -->
-         <div id="buyAirtimeContent-page" class="content-page">
-            <div class="container">
-                <h3 class="mb-3 fs-5 mt-n2">Buy Airtime</h3><hr class="mt-n2">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="form-group">
-                            <label for="network">Select Network</label>
-                            <select class="form-control" id="network" required>
-                                <option value="">Select Network</option>
-                                <option value="mtn">MTN</option>
-                                <option value="airtel">Airtel</option>
-                                <option value="glo">GLO</option>
-                                <option value="9mobile">9Mobile</option>
-                            </select>
-                        </div>
+         <div class="container more-container">
+                <!-- Account Settings Section -->
+                <h4 class="mb-3 fs-6 mt-n2">Account Settings</h4>
+                <!-- Divider -->
+                <div class="divider"></div>
 
-                        <!-- Phone Number -->
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" class="form-control" id="phone" placeholder="Enter phone number" required>
-                        </div>
+                <!-- Card for Change Login Password -->
+                <div class="more-card">
+                    <div>
+                        <div class="more-card-text">Change Login Password</div>
+                        <div class="more-card-subtext">Update your account's password</div>
+                    </div>
+                    <i class="bi bi-key"></i>
+                </div>
 
-                        <!-- Amount -->
-                        <div class="form-group">
-                            <label for="amount">Amount</label>
-                            <input type="tel" class="form-control" id="amount" placeholder="Enter amount" required>
-                        </div>
+                <!-- Card for Set Payment PIN -->
+                <div class="more-card">
+                    <div>
+                        <div class="more-card-text">Set Payment PIN</div>
+                        <div class="more-card-subtext">Secure your transactions with a PIN</div>
+                    </div>
+                    <i class="bi bi-shield-lock"></i>
+                </div>
 
-                        <!-- Pay Button -->
-                        <button type="button" class="btn pay-btn" onclick="openPaymentCard()">Pay</button>
+                <!-- Notification Settings -->
+                <div class="section-title">App Preferences</div>
+
+                <!-- Card for Notification Settings -->
+                <div class="more-card">
+                    <div>
+                        <div class="more-card-text">Notification Settings</div>
+                        <div class="more-card-subtext">Control your notification preferences</div>
+                    </div>
+                    <i class="bi bi-bell"></i>
+                </div>
+
+                <!-- Card for Dark Mode -->
+                <div class="more-card">
+                    <div class="toggle-switch">
+                        <span class="more-card-text">Dark Mode</span>
+                        <input type="checkbox" id="dark-mode-toggle">
+                        <label for="dark-mode-toggle"></label>
                     </div>
                 </div>
-                
-            </div>
-         </div>
 
+                <!-- Card for Transaction Limit Settings -->
+                <div class="more-card">
+                    <div>
+                        <div class="more-card-text">Transaction Limit</div>
+                        <div class="more-card-subtext">Set your daily transaction limit</div>
+                    </div>
+                    <i class="bi bi-credit-card"></i>
+                </div>
 
-         <!-- Sliding Payment Card -->
-        <div class="payment-card mb-3" id="paymentCard">
-            <span class="close-btn" onclick="closePaymentCard()"><i class="bi bi-x-circle"></i></span> 
-            <div class="payment-title">Enter Payment PIN</div>
-            <!-- Custom Number Boxes -->
-            <div class="password-boxes" id="passwordBoxes">
-                <div class="ml-1 mr-1" id="box1"></div>
-                <div class="ml-1 mr-1" id="box2"></div>
-                <div class="ml-1 mr-1" id="box3"></div>
-                <div class="ml-1 mr-1" id="box4"></div>
+                <!-- Download App Section -->
+                <div class="section-title">Get Our App</div>
+
+                <!-- Card for Download App -->
+                <div class="more-card">
+                    <div>
+                        <div class="more-card-text">Download the Bonanza-Pay App</div>
+                        <div class="more-card-subtext">For a smoother, faster experience</div>
+                    </div>
+                    <i class="bi bi-download"></i>
+                </div>
+
+                <!-- Community Section -->
+                <div class="section-title">Join Our Community</div>
+
+                <!-- Social Media Icons -->
+                <div class="social-container">
+                    <div class="social-icons">
+                        <a href="https://wa.me/yourlink" class="whatsapp" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                        <a href="https://t.me/yourlink" class="telegram" target="_blank"><i class="bi bi-telegram"></i></a>
+                        <a href="https://instagram.com/yourlink" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://facebook.com/yourlink" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+                        <a href="https://twitter.com/yourlink" class="twitter" target="_blank"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+
+            <!-- Footer Links (Optional) -->
+            <div class="more-footer">
+                <a href="#">FAQs</a> | 
+                <a href="#">Terms & Conditions</a>
             </div>
-            <!-- Keypad -->
-            <div class="keypad mb-3" id="keypad">
-                <button onclick="pressKey(1)">1</button>
-                <button onclick="pressKey(2)">2</button>
-                <button onclick="pressKey(3)">3</button>
-                <button onclick="pressKey(4)">4</button>
-                <button onclick="pressKey(5)">5</button>
-                <button onclick="pressKey(6)">6</button>
-                <button onclick="pressKey(7)">7</button>
-                <button onclick="pressKey(8)">8</button>
-                <button onclick="pressKey(9)">9</button>
-                <button class="zero-btn" onclick="pressKey(0)">0</button>
-                <!-- <button></button> -->
-                <button class="backspace-btn" onclick="backspace()"><i class="bi bi-arrow-left-circle-fill"></i></button>
-            </div><br>
         </div>
-      </div>
-      <!-- Wrapper END -->
-
+    </div>
+    <!-- Wrapper END -->
        <!-- Sticky Bottom Navigation -->
        <nav class="sticky-bottom-nav navbar-light bg-light d-lg-none">
             <div class="container-fluid">
@@ -227,87 +243,9 @@
         </nav>
       <!-- Footer -->
       <footer class="bg-white iq-footer">
+         
       </footer>
-
-      <script>
-        let password = [];
-        const passwordBoxes = [document.getElementById('box1'), document.getElementById('box2'), document.getElementById('box3'), document.getElementById('box4')];
-
-        // Function to open sliding payment card
-        function openPaymentCard() {
-            document.getElementById('paymentCard').classList.add('active');
-            document.getElementById('passwordBoxes').style.display = 'flex';
-            document.getElementById('keypad').style.display = 'grid';
-        }
-
-        // Function to close sliding payment card and reset fields
-        function closePaymentCard() {
-            // Remove the active class to hide the payment card
-            document.getElementById('paymentCard').classList.remove('active');
-            
-            // Hide the password boxes and keypad
-            document.getElementById('passwordBoxes').style.display = 'none';
-            document.getElementById('keypad').style.display = 'none';
-            
-            // Reset the password and empty the boxes
-            resetPassword();
-        }
-
-        // Function to handle keypress from the numeric keypad
-        function pressKey(key) {
-            if (password.length < 4) {
-                password.push(key);
-                passwordBoxes[password.length - 1].textContent = key;
-                passwordBoxes[password.length - 1].classList.add('filled');
-
-                // If the password has 4 digits, submit it
-                if (password.length === 4) {
-                    showLoadingAnimation();
-                }
-            }
-        }
-
-        // Function to handle backspace (delete last digit)
-        function backspace() {
-            if (password.length > 0) {
-                password.pop();
-                const lastBox = passwordBoxes[password.length];
-                lastBox.textContent = '';
-                lastBox.classList.remove('filled');
-            }
-        }
-
-        // Function to show loading animation and blur background
-        function showLoadingAnimation() {
-            document.getElementById('airtimeContainer').classList.add('blurred'); // Blur background
-            document.getElementById('loadingOverlay').classList.add('active'); // Show loading
-
-            // Simulate processing time (3 seconds)
-            setTimeout(function() {
-                hideLoadingAnimation();
-                // Redirect to success or error page
-                window.location.href = 'success.html'; // Change to 'error.html' for error
-            }, 3000);
-        }
-
-        // Function to hide loading animation
-        function hideLoadingAnimation() {
-            document.getElementById('airtimeContainer').classList.remove('blurred'); // Remove blur
-            document.getElementById('loadingOverlay').classList.remove('active'); // Hide loading
-        }
-
-        // Function to reset the password input
-        function resetPassword() {
-            password = [];
-            passwordBoxes.forEach(box => {
-                box.textContent = '';
-                box.classList.remove('filled');
-            });
-        }
-    </script>
       
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
       <!-- Footer END -->
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -316,6 +254,10 @@
       <script src="dashboard-js/bootstrap.min.js"></script>
       <!-- Appear JavaScript -->
       <script src="dashboard-js/jquery.appear.js"></script>
+      <!-- Countdown JavaScript -->
+      <script src="js/countdown.min.js"></script>
+      <!-- Counterup JavaScript -->
+      <script src="js/waypoints.min.js"></script>
       <script src="dashboard-js/jquery.counterup.min.js"></script>
       <!-- Custom JavaScript -->
       <script src="dashboard-js/custom.js"></script>

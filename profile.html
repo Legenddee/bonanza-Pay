@@ -5,10 +5,10 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <title>BONANZA-PAY</title>
-        <!-- Bootstrap CSS -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Bootstrap Icons -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> <!-- Favicon -->
+    <!-- Bootstrap CSS -->
+   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> <!-- Favicon -->
       <link rel="shortcut icon" href="images/logo.png" />
       <!-- Style CSS -->
       <link rel="stylesheet" href="./css/style.css">
@@ -16,11 +16,6 @@
       <link rel="stylesheet" href="./css/responsive.css">
    </head>
    <body>
-    <!-- Loading Overlay -->
-    <div class="loading-overlay" id="loadingOverlay">
-        <div class="loading-spinner"></div>
-    </div>
-
       <!-- loader Start -->
       <div id="loading">
          <div id="loading-center">
@@ -41,7 +36,7 @@
       <!-- loader END -->
        
       <!-- Wrapper Start -->
-      <div class="wrapper airtime-container" id="airtimeContainer">
+      <div class="wrapper">
          <!-- Sidebar  -->
          <div class="iq-sidebar">
             <div class="iq-sidebar-logo d-flex justify-content-between" id="logo">
@@ -126,76 +121,85 @@
          </div>
          <!-- TOP Nav Bar END -->
 
-         <!-- Page Content  -->
-         <div id="buyAirtimeContent-page" class="content-page">
-            <div class="container">
-                <h3 class="mb-3 fs-5 mt-n2">Buy Airtime</h3><hr class="mt-n2">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="form-group">
-                            <label for="network">Select Network</label>
-                            <select class="form-control" id="network" required>
-                                <option value="">Select Network</option>
-                                <option value="mtn">MTN</option>
-                                <option value="airtel">Airtel</option>
-                                <option value="glo">GLO</option>
-                                <option value="9mobile">9Mobile</option>
-                            </select>
-                        </div>
+          <!-- Page Content  -->
+            <div class="profile-container">
+                <!-- Profile Header -->
+                <div class="profile-header">
+                    <div class="profile-picture">
+                        <img src="./images/profile-img.jpg" alt="Profile Picture">
+                        <!-- <div class="change-photo" title="Change Photo">
+                            <i class="bi bi-camera"></i>
+                        </div> -->
+                    </div>
+                    <h3>Legend Dee</h3>
+                    <p class="text-muted">legenddee@example.com</p>
+                </div>
+                <!-- Profile Actions -->
+                <div class="profile-actions">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editProfileModal">
+                        <i class="bi bi-pencil-square"></i> Edit Profile
+                    </button>
+                    <!-- Trigger Button -->
+                </div> 
+                
+                <!-- Divider -->
+                <div class="divider"></div>
 
-                        <!-- Phone Number -->
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" class="form-control" id="phone" placeholder="Enter phone number" required>
-                        </div>
+                <!-- Profile Information -->
+                <div class="profile-info">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" class="form-control-plaintext" id="name" value="Ibrahim Yakubu Ibrahim" Disabled>
+                    </div>
 
-                        <!-- Amount -->
-                        <div class="form-group">
-                            <label for="amount">Amount</label>
-                            <input type="tel" class="form-control" id="amount" placeholder="Enter amount" required>
-                        </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control-plaintext" id="email" value="legenddee@example.com" Disabled>
+                    </div>
 
-                        <!-- Pay Button -->
-                        <button type="button" class="btn pay-btn" onclick="openPaymentCard()">Pay</button>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" class="form-control-plaintext" id="phone" value="+234 913 131 3036" Disabled>
                     </div>
                 </div>
-                
-            </div>
-         </div>
 
+                <!-- Additional Info Section (Wallet, Transactions) -->
+                <div class="additional-info mt-4">
+                    <h5>Account Overview</h5>
+                    <div class="row">
+                        <!-- Wallet Balance -->
+                        <div class="col-6 mb-3">
+                            <div class="info-card">
+                                <div class="icon"><i class="bi bi-wallet"></i></div>
+                                <h6>Wallet Balance</h6>
+                                <p>₦10,000</p>
+                            </div>
+                        </div>
+                        <!-- Recent Transactions -->
+                        <div class="col-6 mb-3">
+                            <a href="#">
+                                <div class="info-card">
+                                    <div class="icon"><i class="bi bi-receipt"></i></div>
+                                    <h6>Transactions</h6>
+                                    <p>Recent History</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-         <!-- Sliding Payment Card -->
-        <div class="payment-card mb-3" id="paymentCard">
-            <span class="close-btn" onclick="closePaymentCard()"><i class="bi bi-x-circle"></i></span> 
-            <div class="payment-title">Enter Payment PIN</div>
-            <!-- Custom Number Boxes -->
-            <div class="password-boxes" id="passwordBoxes">
-                <div class="ml-1 mr-1" id="box1"></div>
-                <div class="ml-1 mr-1" id="box2"></div>
-                <div class="ml-1 mr-1" id="box3"></div>
-                <div class="ml-1 mr-1" id="box4"></div>
+                <!-- Logout Button -->
+                <div class="logout-section">
+                    <button type="button" class="btn btn-danger">
+                        <i class="bi bi-box-arrow-right logout-icon"></i> Logout
+                    </button>
+                </div>
             </div>
-            <!-- Keypad -->
-            <div class="keypad mb-3" id="keypad">
-                <button onclick="pressKey(1)">1</button>
-                <button onclick="pressKey(2)">2</button>
-                <button onclick="pressKey(3)">3</button>
-                <button onclick="pressKey(4)">4</button>
-                <button onclick="pressKey(5)">5</button>
-                <button onclick="pressKey(6)">6</button>
-                <button onclick="pressKey(7)">7</button>
-                <button onclick="pressKey(8)">8</button>
-                <button onclick="pressKey(9)">9</button>
-                <button class="zero-btn" onclick="pressKey(0)">0</button>
-                <!-- <button></button> -->
-                <button class="backspace-btn" onclick="backspace()"><i class="bi bi-arrow-left-circle-fill"></i></button>
-            </div><br>
-        </div>
       </div>
       <!-- Wrapper END -->
-
        <!-- Sticky Bottom Navigation -->
        <nav class="sticky-bottom-nav navbar-light bg-light d-lg-none">
+        
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-3">
@@ -226,88 +230,65 @@
             </div>
         </nav>
       <!-- Footer -->
-      <footer class="bg-white iq-footer">
-      </footer>
+      <footer class="bg-white iq-footer"></footer>
+        <!-- =====EDIT PROFILE MODAL START -->
+        <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileLabel"  aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header bg-primary text-white">
+                        <h4 class="modal-title mb-4 mt-n3" id="editProfileLabel">Bonanza-Pay</h4>
+                        <h5 class="modal-title text-center" id="editProfileLabel">Edit Your Profile</h5>
+                    </div>
 
-      <script>
-        let password = [];
-        const passwordBoxes = [document.getElementById('box1'), document.getElementById('box2'), document.getElementById('box3'), document.getElementById('box4')];
+                    <form method="" action="">
+                        <!-- Modal Body -->
+                        <div class="modal-body">
+                            <!-- Full Name -->
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="fullName" value="Ibrahim Yakubu Ibrahim">
+                            </div>
 
-        // Function to open sliding payment card
-        function openPaymentCard() {
-            document.getElementById('paymentCard').classList.add('active');
-            document.getElementById('passwordBoxes').style.display = 'flex';
-            document.getElementById('keypad').style.display = 'grid';
-        }
+                            <!-- User Name -->
+                            <div class="mb-3">
+                                <label for="userName" class="form-label">UserName</label>
+                                <input type="text" class="form-control" id="userName" value="DeeCipher">
+                            </div>
 
-        // Function to close sliding payment card and reset fields
-        function closePaymentCard() {
-            // Remove the active class to hide the payment card
-            document.getElementById('paymentCard').classList.remove('active');
-            
-            // Hide the password boxes and keypad
-            document.getElementById('passwordBoxes').style.display = 'none';
-            document.getElementById('keypad').style.display = 'none';
-            
-            // Reset the password and empty the boxes
-            resetPassword();
-        }
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" value="iyaqub69@gmail.com">
+                            </div>
 
-        // Function to handle keypress from the numeric keypad
-        function pressKey(key) {
-            if (password.length < 4) {
-                password.push(key);
-                passwordBoxes[password.length - 1].textContent = key;
-                passwordBoxes[password.length - 1].classList.add('filled');
+                            <!-- Phone Number -->
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" value="09131313036">
+                            </div>
 
-                // If the password has 4 digits, submit it
-                if (password.length === 4) {
-                    showLoadingAnimation();
-                }
-            }
-        }
+                            <!-- Profile Picture -->
+                            <div class="mb-3">
+                                <label for="profileDP" class="form-label">Upload Profile Picture</label>
+                                <input type="file" class="form-contr" id="profileDP" >
+                            </div>
+                            
+                            <!-- Divider -->
+                            <div class="divider"></div>
+                        </div>
 
-        // Function to handle backspace (delete last digit)
-        function backspace() {
-            if (password.length > 0) {
-                password.pop();
-                const lastBox = passwordBoxes[password.length];
-                lastBox.textContent = '';
-                lastBox.classList.remove('filled');
-            }
-        }
-
-        // Function to show loading animation and blur background
-        function showLoadingAnimation() {
-            document.getElementById('airtimeContainer').classList.add('blurred'); // Blur background
-            document.getElementById('loadingOverlay').classList.add('active'); // Show loading
-
-            // Simulate processing time (3 seconds)
-            setTimeout(function() {
-                hideLoadingAnimation();
-                // Redirect to success or error page
-                window.location.href = 'success.html'; // Change to 'error.html' for error
-            }, 3000);
-        }
-
-        // Function to hide loading animation
-        function hideLoadingAnimation() {
-            document.getElementById('airtimeContainer').classList.remove('blurred'); // Remove blur
-            document.getElementById('loadingOverlay').classList.remove('active'); // Hide loading
-        }
-
-        // Function to reset the password input
-        function resetPassword() {
-            password = [];
-            passwordBoxes.forEach(box => {
-                box.textContent = '';
-                box.classList.remove('filled');
-            });
-        }
-    </script>
+                        <!-- Modal Footer -->
+                        <div class="modal-footer mt-n4">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- =====EDIT PROFILE MODAL END -->
       
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
       <!-- Footer END -->
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -316,6 +297,10 @@
       <script src="dashboard-js/bootstrap.min.js"></script>
       <!-- Appear JavaScript -->
       <script src="dashboard-js/jquery.appear.js"></script>
+      <!-- Countdown JavaScript -->
+      <script src="js/countdown.min.js"></script>
+      <!-- Counterup JavaScript -->
+      <script src="js/waypoints.min.js"></script>
       <script src="dashboard-js/jquery.counterup.min.js"></script>
       <!-- Custom JavaScript -->
       <script src="dashboard-js/custom.js"></script>
